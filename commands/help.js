@@ -48,8 +48,7 @@ module.exports = {
           { name: '⏮️ Previous', value: 'Play the previous song in the queue' },
           { name: '🔀 Shuffle', value: 'Shuffle the songs in queue' },
           { name: '📃 playlist', value: 'manage the playlists' }
-        )
-        .setImage(`https://https://cdn.discordapp.com/attachments/1134921192323678258/1254745493985169429/2024-03-31_kb_banner.png?ex=667a9c4d&is=66794acd&hm=bc110f7bb8ba81cbd0d7e801a145bac002327a4cc91e8dac5b089b0f9f278fea&`); 
+        ) 
 
       const basicCommandsEmbed = new EmbedBuilder()
         .setColor(client.config.embedColor)
@@ -62,24 +61,13 @@ module.exports = {
            { name: '🎵 Now Playing', value: 'Display the currently playing song information' },
           { name: '🔊 Volume', value: 'Adjust the music volume [ hearing at high volumes is risky ]' },
         ) 
-       .setImage('https://https://cdn.discordapp.com/attachments/1134921192323678258/1254745493985169429/2024-03-31_kb_banner.png?ex=667a9c4d&is=66794acd&hm=bc110f7bb8ba81cbd0d7e801a145bac002327a4cc91e8dac5b089b0f9f278fea&')
       const button1 = new ButtonBuilder()
-        .setLabel('YouTube')
-        .setURL('https://www.youtube.com/channel/UCPbAvYWBgnYhliJa1BIrv0A')
-        .setStyle(ButtonStyle.Link);
-
-      const button2 = new ButtonBuilder()
-        .setLabel('Discord')
-        .setURL('https://discord.gg/FUEHs7RCqz')
-        .setStyle(ButtonStyle.Link);
-
-      const button3 = new ButtonBuilder()
-        .setLabel('Code')
-        .setURL('https://github.com/GlaceYT/MUSIC-BOT-v3.6')
+        .setLabel('Mystery Button')
+        .setURL('https://zzdev.carrd.co/')
         .setStyle(ButtonStyle.Link);
 
       const row = new ActionRowBuilder()
-        .addComponents(button1, button2, button3);
+        .addComponents(button1);
 
       interaction.reply({
         embeds: [musicCommandsEmbed, basicCommandsEmbed],
