@@ -98,11 +98,11 @@ fs.readdir(config.commandsDir, (err, files) => {
 
 if (config.TOKEN || process.env.TOKEN) {
   client.login(config.TOKEN || process.env.TOKEN).catch((e) => {
-    console.log('TOKEN ERROR❌❌');
+    console.log('Failed to login with TOKEN ❌❌');
   });
 } else {
   setTimeout(() => {
-    console.log('TOKEN ERROR❌❌');
+    console.log('Cannot find TOKEN in config or env file ❌❌');
   }, 2000);
 }
 
